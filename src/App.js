@@ -6,11 +6,13 @@ export default class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      quote: []
+      quote: [],
+      isloading: false
     };
     this.handleChange = this.handleChange.bind(this);
   }
   componentDidMount() {
+    this.setState({ isloading: true });
     this.handleChange();
   }
   handleChange() {
@@ -19,15 +21,20 @@ export default class App extends React.Component {
       .then((data) => {
         const arr = data[Math.floor(Math.random() * data.length)];
         this.setState({
-          quote: arr
+          quote: arr,
+          isloading: false
         });
       });
   }
   render() {
-    return (
-      <div className="App">
-        <Quotes quotes={this.state.quote} handleChange={this.handleChange} />
-      </div>
-    );
+    if (this.state.isloading) {
+      return <div className="loaders"></div>;
+    } else {
+      return (
+        <div className="App">
+          <Quotes quotes={this.state.quote} handleChange={this.handleChange} />
+        </div>
+      );
+    }
   }
 }
