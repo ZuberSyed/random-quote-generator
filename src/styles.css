@@ -5,12 +5,20 @@
   margin: 0px;
 }
 body {
-  background-image: url("https://cdn.pixabay.com/photo/2020/06/13/17/51/milky-way-5295160_960_720.jpg");
+  background-image: url("https://cdn.pixabay.com/photo/2017/08/12/10/13/background-2633962_960_720.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .App {
   font-family: sans-serif;
   text-align: center;
   font-family: "El Messiri", sans-serif;
+}
+h1 {
+  font-size: 2.6rem;
+  letter-spacing: 0.15rem;
+  color: rgb(23, 25, 134);
 }
 .quotes {
   color: white;
@@ -20,30 +28,43 @@ body {
   height: 100vh;
   justify-content: space-evenly;
 }
-.quotes h1 {
+.quote {
+  background-color: whitesmoke;
+  display: block;
+  color: rgb(39, 41, 143);
+  margin: 0px 20%;
+  padding: 1.5rem;
+}
+.quote h2 {
   font-size: 1.8em;
 }
-.quotes p {
+.quote p {
   margin-top: 0.8rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+}
+.btnStyle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .btn {
   font-family: "El Messiri", sans-serif;
   text-transform: capitalize;
-  display: block;
-  margin: 10px auto;
-  background-color: rgb(241, 244, 248);
-  color: rgb(16, 16, 85);
-  padding: 0.4rem;
+  margin-top: 2rem;
+  background-color: rgb(16, 16, 85);
+  padding: 0.25rem;
+  color: white;
   font-size: 1.2rem;
-  border: none;
+  border: 2px solid rgba(16, 16, 85);
   font-weight: bolder;
   cursor: pointer;
   transition: 0.5s;
+  text-decoration: none;
 }
 .btn:hover {
-  background-color: rgb(109, 0, 109);
-  color: white;
+  background-color: white;
+  color: rgb(16, 16, 85);
 }
 .loaders {
   margin: 2rem auto;
